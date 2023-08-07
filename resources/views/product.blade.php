@@ -12,6 +12,7 @@
     <script>
         var editor_config = {
             path_absolute: "http://localhost/lt-web/laravel/LoginLaravel/",
+       
             selector: 'textarea',
             relative_urls: false,
             plugins: [
@@ -46,6 +47,7 @@
             }
         };
 
+        // Khởi tạo trình soạn thảo TinyMCE
         tinymce.init(editor_config);
     </script>
 </head>
