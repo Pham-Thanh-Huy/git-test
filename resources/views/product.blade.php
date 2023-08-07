@@ -10,7 +10,7 @@
 
     <script>
         var editor_config = {
-            path_absolute: "/",
+            path_absolute: "http://localhost/lt-web/laravel/LoginLaravel/",
             selector: 'textarea',
             relative_urls: false,
             plugins: [
