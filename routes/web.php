@@ -33,3 +33,8 @@ Route::get('checkmail', function () {
 Route::group(['prefix' => 'laravel-filemanager'],  function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+
+Route::get('hello', function(){
+    echo 'haha';
+});
