@@ -38,3 +38,8 @@ Route::group(['prefix' => 'laravel-filemanager'],  function () {
 Route::get('hello', function(){
     echo 'haha';
 });
+
+
+Route::get('hi', function(){
+    echo 'hi';
+});
