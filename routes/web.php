@@ -14,7 +14,9 @@ use App\Http\Controllers\StringController;
 |
 */
 
-
+Route::get('/', function(){
+    return view('welcome');
+});
 
 Route::get('str', [Stringcontroller::class, 'string']);
 
