@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <style>
-    textarea{
+    textarea {
         height: 600px;
     }
 </style>
+
 <head>
-    <script src="https://cdn.tiny.cloud/1/niw9c2fqljtnhuobqfjtnyelfewiz4qqkdz1maaj45f7hdqy/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/niw9c2fqljtnhuobqfjtnyelfewiz4qqkdz1maaj45f7hdqy/tinymce/4/tinymce.min.js" referrerpolicy="origin"></script>
 
     <script>
         var editor_config = {
@@ -24,23 +25,20 @@
                 var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
                 var y = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 
-                var cmsURL = editor_config.path_absolute + 'laravel-filemanager?editor=' + meta.fieldname;
-                if (meta.filetype == 'image') {
+                var cmsURL = editor_config.path_absolute + 'laravel-filemanager?field_name=' + field_name;
+                if (type == 'image') {
                     cmsURL = cmsURL + "&type=Images";
                 } else {
                     cmsURL = cmsURL + "&type=Files";
                 }
 
-                tinyMCE.activeEditor.windowManager.openUrl({
-                    url: cmsURL,
+                tinyMCE.activeEditor.windowManager.open({
+                    file: cmsURL,
                     title: 'Filemanager',
                     width: x * 0.8,
                     height: y * 0.8,
                     resizable: "yes",
-                    close_previous: "no",
-                    onMessage: (api, message) => {
-                        callback(message.content);
-                    }
+                    close_previous: "no"
                 });
             }
         };
